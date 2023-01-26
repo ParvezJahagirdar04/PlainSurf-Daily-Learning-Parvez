@@ -7,15 +7,18 @@
 
   padding: 1rem 2rem;
   background: rgba(255, 255, 255, 0.25);
-  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur(4px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      backdrop-filter: blur(114px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
   z-index: 2;
+
+  
 }
 
 .app__navbar-logo {
+  
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -24,14 +27,12 @@
     width: 90px;
     height: 20px;
 
-    @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
-    }
+    
   }
 }
 
 .app__navbar-links {
+  
   flex: 1;
   display: flex;
   justify-content: center;
@@ -48,7 +49,7 @@
     div {
       width: 5px;
       height: 5px;
-      background: transparent;
+      // background: transparent;
       border-radius: 50%;
 
       margin-bottom: 5px;
@@ -74,8 +75,9 @@
         background: var(--secondary-color);
       }
     }
+    
   }
-
+  
   
 }
 
@@ -89,7 +91,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
-
+display: none;
 
   svg {
     width: 70%;
@@ -158,14 +160,41 @@
           }
         }
       }
+      
     }
-
-    @media screen and (min-width: 900px) {
+    @media (max-width: 768px) {
+      display: flex;
+     
+      .app__navbar-menu {
       display: none;
-    }
+      }
+    
   }
 
-  @media screen and (min-width: 900px) {
+  
+}
+
+}
+@media (max-width: 768px) {
+  .app__navbar-links {
     display: none;
+    li{
+      left: -27px;
+      width: auto;
+      height: auto;
+      font-weight: normal;
+    }
   }
+  .app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+  }
+  
 }
